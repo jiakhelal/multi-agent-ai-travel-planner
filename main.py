@@ -21,9 +21,7 @@ from tools.flight_tool import search_flights
 from tools.weather_tool import get_weather
 
 load_dotenv()
-print("GROQ KEY =", os.getenv("GROQ_API_KEY"))
-print("TAVILY KEY =", os.getenv("TAVILY_API_KEY"))
-print("WEATHER KEY =", os.getenv("OPENWEATHER_API_KEY"))
+
 
 
 # LLM
