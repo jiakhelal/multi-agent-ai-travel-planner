@@ -22,12 +22,16 @@ from tools.weather_tool import get_weather
 
 load_dotenv()
 
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+os.environ["TAVILY_API_KEY"] = st.secrets["TAVILY_API_KEY"]
+os.environ["OPENWEATHER_API_KEY"] = st.secrets["OPENWEATHER_API_KEY"]
+
 
 
 # LLM
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
-    api_key=st.secrets["GROQ_API_KEY"]
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 # State
