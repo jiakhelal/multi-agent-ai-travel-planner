@@ -1,6 +1,7 @@
 import os
 import operator
 from typing import TypedDict, Annotated
+import streamlit as st
 
 from dotenv import load_dotenv
 
@@ -27,7 +28,8 @@ print("WEATHER KEY =", os.getenv("OPENWEATHER_API_KEY"))
 
 # LLM
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile"
+    model="llama-3.3-70b-versatile",
+    api_key=st.secrets["GROQ_API_KEY"]
 )
 
 # State
