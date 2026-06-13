@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 import streamlit as st
 
 load_dotenv()
-print("TAVILY KEY =", os.getenv("TAVILY_API_KEY"))
 client = TavilyClient(
     api_key=st.secrets["TAVILY_API_KEY"]
 )
